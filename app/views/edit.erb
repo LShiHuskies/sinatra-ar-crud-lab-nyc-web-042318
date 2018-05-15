@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Post </h1>
+      <form method="post" action="/posts/<%= @locator.id %>">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <p>Name<input type="text" name="name" value="<%=@locator.name%>"></p>
+      <p>Content<input type="text" name="content" value="<%=@locator.content%>"><p>
+      <input id="submit" type="submit">
+    </form>
+  </body>
+</html>

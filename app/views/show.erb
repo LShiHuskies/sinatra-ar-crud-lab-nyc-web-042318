@@ -1,0 +1,12 @@
+<h1>
+  <%= @locator.name %> | <%= @locator.content %>
+</h1>
+
+
+
+  <form method="post" action="/posts/<%= @locator.id %>">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  Name<input type="text" name="name" value="<%=@locator.name%>">
+  Content<input type="text" name="content" value="<%=@locator.content%>">
+  <input type="submit" value="delete"/>
+</form>
